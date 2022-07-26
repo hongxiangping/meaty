@@ -1,0 +1,18 @@
+<head>
+	<script src="./node_modules//babel-standalone/babel.min.js"/>
+</head>
+<body>
+	<div id="meaty">
+		<span>loading...</span>
+	</div>
+	<script type="text/babel">
+		const Hello = () => {
+			const [text, setText] =  React.useState('Hello meaty!');
+            return (<span onClick={()=> {
+                setText('Hi!')
+            }}> {text} </span>);
+		};
+		const root = ReactDOM.createRoot(document.getElementById('meaty'));
+		root.render(React.createElement(Hello));
+	</script>
+</body>
